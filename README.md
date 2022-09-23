@@ -190,7 +190,7 @@ image10.pgm: 3024 x 3024 = 9144576 pixels
 TOTAL: 428765 clock cycles.
 ```
 
-#### ⚡️ Au total, environ 4.2 fois plus rapide avec l'optimisation !
+**⚡️ Au total, environ 4.2 fois plus rapide avec l'optimisation !**
 
 ## Parallélisation avec OpenMP, des résultats décevants 👎
 
@@ -287,3 +287,51 @@ TOTAL: 617486 clock cycles.
 ```
 
 #### Le nombre de clock cycles augment avec le nombre de threads...
+
+### Optimisation de compilation sur la machine (`-O2`)
+
+**⚡️ Environ 5.5 fois plus rapide que la version 3, ce qui fait au total presque 23 fois plus rapide que la version 0.**
+
+```
+image1.pgm courbe1.amp 5 image1_t.pgm
+image1.pgm: 5617 x 3684 = 20693028 pixels
+===> 9590 clock cycles.
+
+image2.pgm courbe2.amp 5 image2_t.pgm
+image2.pgm: 5227 x 3515 = 18372905 pixels
+===> 7607 clock cycles.
+
+image3.pgm courbe3.amp 5 image3_t.pgm
+image3.pgm: 6660 x 9185 = 61172100 pixels
+===> 27084 clock cycles.
+
+image4.pgm courbe4.amp 4 image4_t.pgm
+image4.pgm: 3381 x 4914 = 16614234 pixels
+===> 6988 clock cycles.
+
+image5.pgm courbe5.amp 7 image5_t.pgm
+image5.pgm: 3226 x 3255 = 10500630 pixels
+===> 4376 clock cycles.
+
+image6.pgm courbe6.amp 6 image6_t.pgm
+image6.pgm: 3677 x 3677 = 13520329 pixels
+===> 5938 clock cycles.
+
+image7.pgm courbe7.amp 9 image7_t.pgm
+image7.pgm: 3264 x 4896 = 15980544 pixels
+===> 6876 clock cycles.
+
+image8.pgm courbe8.amp 5 image8_t.pgm
+image8.pgm: 1757 x 2636 = 4631452 pixels
+===> 2064 clock cycles.
+
+image9.pgm courbe9.amp 7 image9_t.pgm
+image9.pgm: 2498 x 3330 = 8318340 pixels
+===> 3618 clock cycles.
+
+image10.pgm courbe10.amp 9 image10_t.pgm
+image10.pgm: 3024 x 3024 = 9144576 pixels
+===> 4061 clock cycles.
+
+TOTAL: 78202 clock cycles.
+```

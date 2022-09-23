@@ -11,7 +11,7 @@ INC_DIRS := $(shell find $(SRC_DIRS) -type d)
 INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
 CC = gcc-12
-CFLAGS = -fopenmp
+CFLAGS = -O2
 CPPFLAGS ?= $(INC_FLAGS)
 
 $(BUILD_DIR)/$(TARGET_EXEC): $(OBJS)
